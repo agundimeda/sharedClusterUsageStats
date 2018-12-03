@@ -15,7 +15,7 @@ def listUsers(): # Returns a string list of all 'uma' users from the start of th
 	shareddb = mysql.connector.connect(
 		host = "ghpcc05",
 		user = "uma",
-		passwd = "77IXiJu9lYYqMxdG",
+		passwd = "",
 		database = "lsf_acct")
 
 	cursor = shareddb.cursor()
@@ -39,10 +39,10 @@ def userQuery(name): # Returns monthly & yearly usage statistics for a single us
 
 	
 	shareddb = mysql.connector.connect(
-		host = "",
-		user = "",
+		host = "ghpcc05",
+		user = "uma",
 		passwd = "",
-		database = "")
+		database = "lsf_acct")
 
 	buff.write("PI: " + name + '\n')
 	cursor = shareddb.cursor()
